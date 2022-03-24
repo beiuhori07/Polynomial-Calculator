@@ -23,11 +23,11 @@ public class Polynomial {
     }
 
     public Polynomial(String s) {
-        s = s.replaceAll("\\s","");
+        s = s.replaceAll("\\s", "");
         Pattern p = Pattern.compile(PATTERN);
         Matcher m = p.matcher(s);
         int x = 0;
-        while(m.find()) {
+        while (m.find()) {
             x++;
             System.out.println("Group " + x + ": " + m.group());
             monomials.add(new Monomial(m.group()));
